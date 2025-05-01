@@ -10,3 +10,6 @@ Route::get('/', function () {
 Route::get('/api/hello', function () {
     return response()->json(['message' => 'Hello, World!']);
 });
+Route::get('/api/greet/{name}', function ($name) {
+    return response()->json(['message' => 'Hello, ' . $name . '!']);
+});
